@@ -17,6 +17,7 @@ System requirements :
 
 * Python (version 2)
 * bcftools (version 1.12)
+* htslib
 * Open JRE (version 11)
 
 
