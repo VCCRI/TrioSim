@@ -13,6 +13,11 @@ TrioSim is linux shell script based pipeline to generate WGS trio data. It can b
 * In this step, independent simulated BAM files for the trio are generated. We have provided scripts for EAGLE and NEAT simulators for the same. 
 * But the users are free to use VCF files generated from Step1 and use those as input to any other simulator of their choice.
 
+System requirements :
+
+* Python (version 2)
+* bcftools (version 1.12)
+* Open JRE (version 11)
 
 
 Step 1 : Generate trio VCF files 
