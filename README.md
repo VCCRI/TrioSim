@@ -14,6 +14,7 @@ TrioSim is linux shell script based pipeline to generate WGS trio data. It can b
 * But the users are free to use VCF files generated from Step1 and use those as input to any other simulator of their choice.
 
 **System requirements :**
+
 These packages can also be installed as a part of install_dependencies.sh script.
 
 * Python (version 2)
@@ -26,6 +27,7 @@ These packages can also be installed as a part of install_dependencies.sh script
 **Data files requirements :**
 
 These files are required to be downloaded in following sub-directories of TrioSim :
+
 Alternatively, they are installed as a part of install_dependencies.sh script.
 
 a) jars
