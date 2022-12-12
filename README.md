@@ -18,6 +18,7 @@ TrioSim is linux shell script based pipeline to generate WGS trio data. It can b
 * Python (version 2)
 * Modules for python 2 : numpy, pandas, PyVCF
 * bcftools (version 1.7)
+* vcftools (version 0.1.15)
 * htslib (version 1.16)
 * Open JRE (version 11)
 
