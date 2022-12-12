@@ -26,10 +26,24 @@ TrioSim is linux shell script based pipeline to generate WGS trio data. It can b
 
    Usage :
 
-    TrioSim.sh -i <sample number/name> \
-    -d </output directory path> \
-    -n </number of de novo mutations> \
-    -b <hg19/hg38 for variant sites>
+    Usage: ./TrioSim -s <trio_number>
+	-d <output directory path>
+	-n <Number of de novo mutations to be spiked-in>
+	[-t <test_run>]
+	[-h <help>]
+	
+	TrioSim is used to generated trio VCF files using variants from 1000G for parents.
+	For offspring VCF, Mendelian ineritance laws is followed (using generated parental VCF file).  
+	De novo mutations in offsppring VCF are spiked-in from denovo-db.
+	
+	Required arguments:
+	-s <trio_number>                                  The sample number of the trio VCF generation.
+	-d <output directory path>                        Path to the output directory.
+	-n <Number of de novo mutations to be spiked-in>  Number of de novo mutations to be spiked-in into offspring VCF file from denovo-db.
+	
+	Options:
+	-t <test_run>                                     The test run executes TrioSim and generates trio VCF based on chr22 variants from 1000G.
+	-h <help>                                         This help message for TrioSim.
 
 **Step 2 : Generate trio BAM files**
 
