@@ -48,6 +48,11 @@ function run_test_data()
   
   trio_vcf_generation
   
+  END=$(date "+%s")
+
+  echo "It takes $((END-START)) seconds to complete TrioSim..."
+
+  
 }
 
 function trio_vcf_generation()
@@ -89,6 +94,10 @@ function trio_vcf_generation()
 	
 	#cd $target_directory
 	#rm -rf *
+
+	END=$(date "+%s")
+
+	echo "It takes $((END-START)) seconds to complete TrioSim..."
 
 }
 
@@ -140,8 +149,5 @@ then
 fi
 
 
-END=$(date "+%s")
-
-echo "It takes $((END-START)) seconds to complete this script..."
 
 exit
