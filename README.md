@@ -2,7 +2,7 @@
 
 TrioSim is linux shell script based pipeline to generate WGS trio data. It can be run in two steps :
 
-**1. Generate trio VCF files **
+**1. Generate trio VCF files**
 
 * In this step, VCF files for the trio are generated based on Parental VCF Generator and Offspring VCF generator of TrioSim.
 * It has features to spike-in de novo mutations(from denovo-db) in the VCF file of the offspring.
