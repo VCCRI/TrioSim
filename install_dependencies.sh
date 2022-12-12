@@ -20,9 +20,10 @@ sudo apt install openjdk-11-jre-headless
 
 sudo apt install tabix
 
-######## bcftools (v 1.7), Python2, numpy, pandas, pip and pyVCF ############
+######## bcftools (v 1.7), vcftools (v 0.1.15), Python2, numpy, pandas, pip and pyVCF ############
 
 sudo apt install bcftools
+sudo apt install vcftools
 
 sudo add-apt-repository universe
 sudo apt install python2
