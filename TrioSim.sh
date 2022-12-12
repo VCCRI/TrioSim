@@ -50,9 +50,6 @@ function run_test_data()
   
   END=$(date "+%s")
 
-  echo "It takes $((END-START)) seconds to complete TrioSim..."
-
-  
 }
 
 function trio_vcf_generation()
