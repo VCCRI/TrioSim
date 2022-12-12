@@ -6,7 +6,7 @@ TrioSim is linux shell script based pipeline to generate WGS trio data. It can b
 
 * In this step, VCF files for the trio are generated based on Parental VCF Generator and Offspring VCF generator of TrioSim.
 * It has features to spike-in de novo mutations(from denovo-db) in the VCF file of the offspring.
-* VCF file from denovo-db is provided in data_files directory and will be automatically used by TrioSim script.
+* VCF file from denovo-db is provided in data_files directory (from install_dependencies.sh) and will be automatically used by TrioSim script.
 
 **2. Generate trio BAM files**
 
@@ -14,6 +14,7 @@ TrioSim is linux shell script based pipeline to generate WGS trio data. It can b
 * But the users are free to use VCF files generated from Step1 and use those as input to any other simulator of their choice.
 
 **System requirements :**
+These packages can also be installed as a part of install_dependencies.sh script.
 
 * Python (version 2)
 * Modules for python 2 : numpy, pandas, PyVCF
@@ -21,6 +22,21 @@ TrioSim is linux shell script based pipeline to generate WGS trio data. It can b
 * vcftools (version 0.1.15)
 * htslib (version 1.16)
 * Open JRE (version 11)
+
+**Data files requirements :**
+
+These files are required to be downloaded in following sub-directories of TrioSim :
+Alternatively, they are installed as a part of install_dependencies.sh script.
+
+a) jars
+* https://github.com/visze/simdrom/releases/download/v0.0.2/simdrom-cli-0.0.2.jar
+
+b) data_files : 
+* s3://vccri-giannoulatou-lab-denovo-mutations/programs/TrioSim/data_files/chromosome_name.txt
+* s3://vccri-giannoulatou-lab-denovo-mutations/programs/TrioSim/data_files/denovo-db.non-ssc-samples.variants_hg38LiftedOver_decoy_hla_UCSC_SNP_INDEL.vcf
+* s3://vccri-giannoulatou-lab-denovo-mutations/programs/TrioSim/data_files/chr22_hg38_sites.vcf
+* s3://vccri-giannoulatou-lab-denovo-mutations/programs/TrioSim/data_files/ALL.WGS_GRCh38_sites.20170504.vcf.gz
+* s3://vccri-giannoulatou-lab-denovo-mutations/programs/TrioSim/data_files/ALL.WGS_GRCh38_sites.20170504.vcf.gz.tbi
 
 
 **Step 1 : Generate trio VCF files**
