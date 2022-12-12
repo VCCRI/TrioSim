@@ -48,8 +48,6 @@ function run_test_data()
   
   trio_vcf_generation
   
-  END=$(date "+%s")
-
 }
 
 function trio_vcf_generation()
