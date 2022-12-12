@@ -14,7 +14,7 @@ sudo apt-get install liblzma-dev
 
 sudo apt install make
 
-###### JRE, bgzip ############################
+###### JRE, bgzip  ############################
 
 sudo apt install openjdk-11-jre-headless
 

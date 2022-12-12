@@ -4,12 +4,28 @@
 ## Usage help function ##
 function help()
 {
-    echo "Usage: ./TrioSim [ -t | --test_run ]
-	[ -s | --trio_number ]
-	[ -d | --target_directory ]
-	[ -n | --num_dnms ]
-	[ -h | --help  ]"
-    
+    echo "Usage: ./TrioSim -s <trio_number>
+	-d <output directory path>
+	-n <Number of de novo mutations to be spiked-in>
+	[-t <test_run>]
+	[-h <help>]
+	
+	TrioSim is used to generated trio VCF files using variants from 1000G for parents.
+	For offspring VCF, Mendelian ineritance laws is followed (using generated parental VCF file).  
+	De novo mutations in offsppring VCF are spiked-in from denovo-db.
+	
+	Required arguments:
+	-s <trio_number>                                  The sample number of the trio VCF generation.
+	-d <output directory path>                        Path to the output directory.
+	-n <Number of de novo mutations to be spiked-in>  Number of de novo mutations to be spiked-in into offspring VCF file from denovo-db.
+	
+	Options:
+	-t <test_run>                                     The test run executes TrioSim and generates trio VCF based on chr22 variants from 1000G.
+	-h <help>                                         This help message for TrioSim.
+	
+	
+    "
+	
 	exit
 }
 
@@ -17,7 +33,7 @@ function help()
 ## Here, small test data based on chromosome 22 is run. Trio VCF files and DNMs are for chr22.
 function run_test_data()
 {
-  echo "Run test data. It generates Trio VCF files for chromosome 22 !"
+  echo "Run test data. It generates Trio VCF files for chromosome 22 including spiked-in de novo mutations!"
   echo "Output will be generated in test_run_output sub-directory in TrioSim installation direcctory"
   
   vcf_sites_file=data_files/chr22_hg38_sites.vcf
