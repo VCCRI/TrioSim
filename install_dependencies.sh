@@ -48,6 +48,8 @@ cd ..
 
 ########### Download files ###############
 
+sudo apt  install awscli
+
 aws s3 cp --recursive s3://vccri-giannoulatou-lab-denovo-mutations/programs/TrioSim/data_files data_files
 
 #aws s3 cp s3://vccri-giannoulatou-lab-denovo-mutations/programs/TrioSim/data_files/chromosome_name.txt .
