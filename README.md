@@ -34,11 +34,11 @@ a) jars
 * https://github.com/visze/simdrom/releases/download/v0.0.2/simdrom-cli-0.0.2.jar
 
 b) data_files : 
-* s3://vccri-giannoulatou-lab-denovo-mutations/programs/TrioSim/data_files/chromosome_name.txt
-* s3://vccri-giannoulatou-lab-denovo-mutations/programs/TrioSim/data_files/denovo-db.non-ssc-samples.variants_hg38LiftedOver_decoy_hla_UCSC_SNP_INDEL.vcf
-* s3://vccri-giannoulatou-lab-denovo-mutations/programs/TrioSim/data_files/chr22_hg38_sites.vcf
-* s3://vccri-giannoulatou-lab-denovo-mutations/programs/TrioSim/data_files/ALL.WGS_GRCh38_sites.20170504.vcf.gz
-* s3://vccri-giannoulatou-lab-denovo-mutations/programs/TrioSim/data_files/ALL.WGS_GRCh38_sites.20170504.vcf.gz.tbi
+* https://vccri-denovo.s3.us-west-2.amazonaws.com/TrioSim/data_files/chromosome_name.txt
+* https://vccri-denovo.s3.us-west-2.amazonaws.com/TrioSim/data_files/denovo-db.non-ssc-samples.variants_hg38LiftedOver_decoy_hla_UCSC_SNP_INDEL.vcf
+* https://vccri-denovo.s3.us-west-2.amazonaws.com/TrioSim/data_files/chr22_hg38_sites.vcf
+* https://vccri-denovo.s3.us-west-2.amazonaws.com/TrioSim/data_files/ALL.WGS_GRCh38_sites.20170504.vcf.gz
+* https://vccri-denovo.s3.us-west-2.amazonaws.com/TrioSim/data_files/ALL.WGS_GRCh38_sites.20170504.vcf.gz.tbi
 
 
 **Step 1 : Generate trio VCF files**
