@@ -48,18 +48,15 @@ cd ..
 
 ########### Download files ###############
 
-sudo apt  install awscli
+mkdir data_files
 
-aws s3 cp --recursive s3://vccri-giannoulatou-lab-denovo-mutations/programs/TrioSim/data_files data_files
+cd data_files
 
-#aws s3 cp s3://vccri-giannoulatou-lab-denovo-mutations/programs/TrioSim/data_files/chromosome_name.txt .
-
-#aws s3 cp s3://vccri-giannoulatou-lab-denovo-mutations/programs/TrioSim/data_files/denovo-db.non-ssc-samples.variants_hg38LiftedOver_decoy_hla_UCSC_SNP_INDEL.vcf .
-
-#aws s3 cp s3://vccri-giannoulatou-lab-denovo-mutations/programs/TrioSim/data_files/chr22_hg38_sites.vcf .
-
-#aws s3 cp s3://vccri-giannoulatou-lab-denovo-mutations/programs/TrioSim/data_files/ALL.WGS_GRCh38_sites.20170504.vcf.gz .
-#aws s3 cp s3://vccri-giannoulatou-lab-denovo-mutations/programs/TrioSim/data_files/ALL.WGS_GRCh38_sites.20170504.vcf.gz.tbi .
+wget https://vccri-denovo.s3.us-west-2.amazonaws.com/TrioSim/data_files/chromosome_name.txt
+wget https://vccri-denovo.s3.us-west-2.amazonaws.com/TrioSim/data_files/denovo-db.non-ssc-samples.variants_hg38LiftedOver_decoy_hla_UCSC_SNP_INDEL.vcf
+wget https://vccri-denovo.s3.us-west-2.amazonaws.com/TrioSim/data_files/chr22_hg38_sites.vcf
+wget https://vccri-denovo.s3.us-west-2.amazonaws.com/TrioSim/data_files/ALL.WGS_GRCh38_sites.20170504.vcf.gz
+wget https://vccri-denovo.s3.us-west-2.amazonaws.com/TrioSim/data_files/ALL.WGS_GRCh38_sites.20170504.vcf.gz.tbi
 
 
 ##### Executables ####
