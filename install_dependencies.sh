@@ -61,6 +61,8 @@ wget https://vccri-denovo.s3.us-west-2.amazonaws.com/TrioSim/data_files/ALL.WGS_
 
 ##### Executables ####
 
+cd ..
+
 chmod +x *.sh *.py
 
 
