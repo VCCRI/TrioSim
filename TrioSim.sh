@@ -66,17 +66,18 @@ function trio_vcf_generation()
 	directory_P1=$target_directory/'parent1'
 	directory_P2=$target_directory/'parent2'
 	directory_child=$target_directory/'child'
+	ethnicity='EUR_AF'
 	
 	
 	## START VCF Generation for PARENTS ##
 
 	echo "Start VCF Generation Parent 1.."
 
-	./Parental_VCF_generator.sh $sample_name_P1 $directory_P1 $vcf_sites_file
+	./Parental_VCF_generator.sh $sample_name_P1 $directory_P1 $vcf_sites_file $ethnicity
 
 	echo "Start VCF Generation Parent 2.."
 
-	./Parental_VCF_generator.sh $sample_name_P2 $directory_P2 $vcf_sites_file
+	./Parental_VCF_generator.sh $sample_name_P2 $directory_P2 $vcf_sites_file $ethnicity
 
 	## START VCF Generation for Child ##
 
@@ -84,7 +85,7 @@ function trio_vcf_generation()
 	vcfgz_file_P2=$directory_P2/$sample_name_P2'_normalized'.vcf.gz
 
 
-	./Offspring_VCF_generator.sh $directory_child $vcfgz_file_P1 $vcfgz_file_P2 $num_DNMs $denovo_db_file
+	##./Offspring_VCF_generator.sh $directory_child $vcfgz_file_P1 $vcfgz_file_P2 $num_DNMs $denovo_db_file
 
 	
 	#cd $target_directory

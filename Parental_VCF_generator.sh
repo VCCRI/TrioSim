@@ -3,13 +3,14 @@
 sample_name=$1
 directory=$2
 vcf_sites_file=$3
+ethnicity=$4
 
 
 ################################################# PARENT 1 VCF Generation ####################################################
 mkdir -p $directory
 
 echo "Start SIMDrom"
-java -jar jars/simdrom-cli-0.0.2.jar -b $vcf_sites_file > $directory/$sample_name.vcf
+java -jar jars/simdrom-cli-0.0.2.jar -b $vcf_sites_file -bAF $ethnicity > $directory/$sample_name.vcf
 
 
 echo "Convert to UCSC"
