@@ -61,7 +61,8 @@ b) data_files :
 	-n <Number of de novo mutations to be spiked-in>  Number of de novo mutations to be spiked-in into offspring VCF file from denovo-db.
 	
 	Options:
-	-t <test_run>                                     The test run executes TrioSim and generates trio VCF based on chr22 variants from 1000G.
+	-t <test_run>                                     The test run executes TrioSim and generates trio VCF based on chr22 variants from 1000G. 
+                                                      It takes about 3.5 minutes to run test data.
 	-h <help>                                         This help message for TrioSim.
 
 **Step 2 : Generate trio BAM files**
