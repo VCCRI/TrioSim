@@ -85,7 +85,7 @@ function trio_vcf_generation()
 	vcfgz_file_P2=$directory_P2/$sample_name_P2'_normalized'.vcf.gz
 
 
-	##./Offspring_VCF_generator.sh $directory_child $vcfgz_file_P1 $vcfgz_file_P2 $num_DNMs $denovo_db_file
+	./Offspring_VCF_generator.sh $directory_child $vcfgz_file_P1 $vcfgz_file_P2 $num_DNMs $denovo_db_file
 
 	
 	#cd $target_directory
