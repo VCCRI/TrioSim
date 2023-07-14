@@ -24,13 +24,13 @@ rm $directory/merged_mother_father.vcf
 
 # Python program : generate Child VCF
 echo "Generate Child VCF.."
-python Offspring_VCF_creator.py $directory/merged_mother_father_normalized.vcf $directory
+python2 Offspring_VCF_creator.py $directory/merged_mother_father_normalized.vcf $directory
 rm $directory/merged_mother_father_normalized.vcf
 
 
 # Python program : Spike-in DNMs in Child VCF
 echo "Spike-in DNMs.."
-python spikeIn_denovo_mutations.py $directory/Child_VCF.vcf $directory $num_DNMs $denovo_db_file > $directory/Child_VCF_DNM.vcf 
+python2 spikeIn_denovo_mutations.py $directory/Child_VCF.vcf $directory $num_DNMs $denovo_db_file > $directory/Child_VCF_DNM.vcf 
 
 echo "Sort Child VCF by chromosome.."
 cat $directory/Child_VCF_DNM.vcf | vcf-sort -c > $directory/Child_VCF_DNM_sort.vcf 
