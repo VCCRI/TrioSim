@@ -36,6 +36,7 @@ a) jars
 b) data_files : 
 * https://vccri-denovo.s3.us-west-2.amazonaws.com/TrioSim/data_files/chromosome_name.txt
 * https://vccri-denovo.s3.us-west-2.amazonaws.com/TrioSim/data_files/denovo-db.non-ssc-samples.variants_hg38LiftedOver_decoy_hla_UCSC_SNP_INDEL.vcf
+* https://vccri-denovo.s3.us-west-2.amazonaws.com/TrioSim/data_files/denovo-db.non-ssc-samples.chr22.UCSC_SNP_INDEL.vcf
 * https://vccri-denovo.s3.us-west-2.amazonaws.com/TrioSim/data_files/chr22_hg38_sites.vcf
 * https://vccri-denovo.s3.us-west-2.amazonaws.com/TrioSim/data_files/ALL.WGS_GRCh38_sites.20170504.vcf.gz
 * https://vccri-denovo.s3.us-west-2.amazonaws.com/TrioSim/data_files/ALL.WGS_GRCh38_sites.20170504.vcf.gz.tbi
@@ -64,6 +65,11 @@ b) data_files :
 	-t <test_run>                                     The test run executes TrioSim and generates trio VCF based on chr22 variants from 1000G. 
                                                       It takes about 3.5 minutes to run test data.
 	-h <help>                                         This help message for TrioSim.
+
+
+***Notes***
+
+* It takes about less than 30 minutes to run TrioSim for WGS trio VCF generation.
 
 **Step 2 : Generate trio BAM files**
 
