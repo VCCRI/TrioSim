@@ -71,14 +71,16 @@ b) data_files :
 
 * It takes about less than 30 minutes to run TrioSim for WGS trio VCF generation.
 
+  
+
 **Step 2 : Generate trio BAM files**
 
 A. Usage for EAGLE genome simulator
     
-    For further information on usage of EAGLE simualator, please refer to : https://github.com/sequencing/EAGLE
+    For further information on usage of EAGLE simulator, please refer to : https://github.com/sequencing/EAGLE
     
 B. Usage for NEAT genome simulator
     
-    For further information on usage of NEAT simualator, please refer to : https://github.com/zstephens/neat-genreads
+    For further information on usage of NEAT simualtor, please refer to : https://github.com/zstephens/neat-genreads
     
     
