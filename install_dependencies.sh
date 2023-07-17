@@ -2,35 +2,35 @@
 
 ## Ubuntu based updates
 
-sudo apt-get update
+sudo apt-get -y update
 
-sudo apt install gcc
+sudo apt -y install gcc
 
-sudo apt-get install zlib1g-dev
+sudo apt-get install -y zlib1g-dev
 
-sudo apt-get install libbz2-dev
+sudo apt-get install -y libbz2-dev
 
-sudo apt-get install liblzma-dev
+sudo apt-get install -y liblzma-dev
 
-sudo apt install make
+sudo apt install -y make
 
 ###### JRE, bgzip  ############################
 
-sudo apt install openjdk-11-jre-headless
+sudo apt install -y openjdk-11-jre-headless
 
-sudo apt install tabix
+sudo apt install -y tabix
 
 ######## bcftools (v 1.7), vcftools (v 0.1.15), Python2, pip, numpy, pandas and pyVCF ############
 
-sudo apt install bcftools
-sudo apt install vcftools
+sudo apt install -y bcftools
+sudo apt install -y vcftools
 
-sudo add-apt-repository universe
-sudo apt install python2
+sudo add-apt-repository -y universe
+sudo apt install -y python2
 #sudo apt install python-numpy
 #sudo apt install python-pandas
 
-sudo apt install curl
+sudo apt install -y curl
 curl https://bootstrap.pypa.io/pip/2.7/get-pip.py --output get-pip.py
 sudo python2 get-pip.py
 
