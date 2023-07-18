@@ -1,0 +1,69 @@
+FROM ubuntu
+
+### Install linux dependencies
+
+RUN apt-get -y update
+
+RUN apt -y install gcc
+
+RUN apt-get install -y zlib1g-dev
+
+RUN apt-get install -y libbz2-dev
+
+RUN apt-get install -y liblzma-dev
+
+RUN apt install -y make
+
+### Install JRE, bgzip 
+
+RUN apt install -y openjdk-11-jre-headless
+
+RUN apt install -y tabix
+
+### bcftools (v 1.7), vcftools (v 0.1.15), Python2, pip, numpy, pandas and pyVCF 
+
+RUN apt install -y bcftools
+RUN apt install -y vcftools
+
+#RUN add-apt-repository -y universe
+RUN apt install -y python2
+
+RUN apt install -y curl
+RUN curl https://bootstrap.pypa.io/pip/2.7/get-pip.py --output get-pip.py
+RUN python2 get-pip.py
+
+RUN pip2 install numpy
+RUN pip2 install pandas
+RUN pip2 install PyVCF
+
+## Add bash scripts
+
+RUN mkdir -p /usr/src/TrioSim
+RUN mkdir -p /usr/src/TrioSim/jars
+RUN mkdir -p /usr/src/TrioSim/data_files
+
+
+ADD ./TrioSim.sh /usr/src/TrioSim/TrioSim.sh
+ADD ./Offspring_VCF_creator.py /usr/src/TrioSim/Offspring_VCF_creator.py
+ADD ./Offspring_VCF_generator.sh /usr/src/TrioSim/Offspring_VCF_generator.sh
+ADD ./Parental_VCF_generator.sh /usr/src/TrioSim/Parental_VCF_generator.sh
+ADD ./spikeIn_denovo_mutations.py /usr/src/TrioSim/spikeIn_denovo_mutations.py
+ADD jars/simdrom-cli-0.0.2.jar /usr/src/TrioSim/jars/simdrom-cli-0.0.2.jar
+ADD data_files/ALL.WGS_GRCh38_sites.20170504.vcf.gz /usr/src/TrioSim/data_files/ALL.WGS_GRCh38_sites.20170504.vcf.gz
+ADD data_files/ALL.WGS_GRCh38_sites.20170504.vcf.gz.tbi /usr/src/TrioSim/data_files/ALL.WGS_GRCh38_sites.20170504.vcf.gz.tbi
+ADD data_files/chr22_hg38_sites.vcf /usr/src/TrioSim/data_files/chr22_hg38_sites.vcf
+ADD data_files/chromosome_name.txt /usr/src/TrioSim/data_files/chromosome_name.txt
+ADD data_files/denovo-db.non-ssc-samples.chr22.UCSC_SNP_INDEL.vcf /usr/src/TrioSim/data_files/denovo-db.non-ssc-samples.chr22.UCSC_SNP_INDEL.vcf
+ADD data_files/denovo-db.non-ssc-samples.variants_hg38LiftedOver_decoy_hla_UCSC_SNP_INDEL.vcf /usr/src/TrioSim/data_files/denovo-db.non-ssc-samples.variants_hg38LiftedOver_decoy_hla_UCSC_SNP_INDEL.vcf
+
+RUN chmod +x /usr/src/TrioSim/TrioSim.sh
+RUN chmod +x /usr/src/TrioSim/Offspring_VCF_creator.py
+RUN chmod +x /usr/src/TrioSim/Offspring_VCF_generator.sh
+RUN chmod +x /usr/src/TrioSim/Parental_VCF_generator.sh
+RUN chmod +x /usr/src/TrioSim/spikeIn_denovo_mutations.py
+RUN chmod +x /usr/src/TrioSim/spikeIn_denovo_mutations.py
+
+## Execution command
+WORKDIR /usr/src/TrioSim
+
+ENTRYPOINT ["/usr/src/TrioSim/./TrioSim.sh"]
